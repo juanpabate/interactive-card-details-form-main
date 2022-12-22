@@ -1,0 +1,34 @@
+@use 'variables' as v;
+
+@mixin input {
+    padding: 10px;
+        outline: none;
+        border: 1px solid v.$Light-grayish-violet;
+        border-radius: 5px;
+        margin-top: 5px;
+        &::placeholder{
+            color: v.$Light-grayish-violet;
+        }
+}
+@mixin button {
+    background-color: v.$Very-dark-violet;
+    color: v.$White;
+    padding: 15px 0;
+    font-size: 15px;
+    border: none;
+    border-radius: 10px;
+    font-family: v.$font;
+    letter-spacing: .5px;
+    transition: box-shadow 0.3s ease;
+    &:hover{
+        cursor: pointer;
+        box-shadow: 0 0 0.4rem v.$Very-dark-violet;
+    }
+    @media (min-width: 900px){
+        padding: 10px 0;
+        font-size: 12px;
+        &:hover{
+            box-shadow: 0 0 0.2rem v.$Very-dark-violet;
+        }
+    }
+}

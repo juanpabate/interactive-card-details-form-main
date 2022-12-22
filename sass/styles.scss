@@ -1,0 +1,48 @@
+@use 'variables' as v;
+@use 'first-section';
+@use 'form-section';
+@use 'mixins';
+@use 'state-completed';
+
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: v.$font;
+    margin-bottom: 0;
+}
+.main-container{
+    width: 375px;
+    height: 620px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    padding-bottom: 0;
+    @media (min-width: 900px){
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+        width: 800px;
+        height: 450px;
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+    }
+}
+.attribution{
+    position: absolute;
+    left: 0;
+    bottom: 0px;
+    right: 0;
+    color: hsl(228, 45%, 44%);
+    font-size: 11px; 
+    text-align: center;
+    @media (min-width: 900px){
+        bottom: -50px;
+    }
+}
+
+

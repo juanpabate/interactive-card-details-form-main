@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="styles.css">
+  
+  <title>Frontend Mentor | Interactive card details form</title>
+  </style>
+</head>
+<body>
+  <main class="main-container">
+    <section class="cards-section">
+      <div class="front-card">
+        <img src="./images/card-logo.svg" alt="" class="front-card__logo">
+        <p class="front-card__number">0000 0000 0000 0000</p>
+          <div class="front-card__namedate">
+            <p class="front-card__name">Jane Appleseed</p>
+            <p><span class="front-card__month">00</span>/<span class="front-card__year">00</span></p>
+          </div>
+      </div>
+      <div class="back-card">
+        <p class="back-card__code">000</p>
+      </div>
+    </section>
+    <section class="form-content">
+      <form action="" class="form">
+        <label for="cardholder" class="label">Cardholder Name</label>
+        <input type="text" class="form__cardholder" id="cardholder" placeholder="e.g. Jane Appleseed"></imput>
+        <div class="form__cardholder--error error"></div>
+  
+        <label for="cardnumber" class="label">Card Number</label>
+        <input type="text" class="form__cardnumber" id="cardnumber" placeholder="e.g. 1234 5678 9123 0000" maxlength="19"></imput>
+        <div class="form__cardnumber--error error"></div>
+  
+        <div class="form__datecode">
+            <label for="month" class="label">Exp. Date (MM/YY)</label>
+            <label for="cvc" class="label">CVC</label>
+            <div class="form__date__inputs">
+              <input class="datecode__month input" id="month" maxlength="2" type="text" placeholder="MM">
+              <input class="datecode__year input" id="year" maxlength='2' type="text" placeholder="YY">
+            </div>
+            <div class="form-datecode__cvc">
+              <input class="form-datecode__cvc--input input" id="cvc" maxlength="3" type="text" placeholder="e.g. 123">
+            </div>
+            <div class="form__errors">
+              <div class="datecode__month--error error"></div>
+              <div class="datecode__yearc--error error"></div>
+            </div>
+            <div class="form__datecode__cvc--error error"></div>
+        </div>
+        <input type="submit" class="form__button" value="Confirm"></input>
+      </form>
+    </section>
+    <section class="completed-state">
+      <img src="./images/icon-complete.svg" alt="icon-complete" class="icon-complete">
+      <h1 class="completed-state__h1">Thank you!</h1>
+      <p class="completed-state__p">We've added your card details</p>
+      <button class="completed-state__button">Continue</button>
+    </section>
+
+    <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Coded by <a href="#">Your Name Here</a>.
+    </div>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>

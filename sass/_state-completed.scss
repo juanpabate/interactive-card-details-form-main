@@ -1,0 +1,32 @@
+@use 'variables' as v;
+@use 'mixins';
+
+.completed-state{
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 100%;
+    top: 320px;
+    &__h1{
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        color: v.$Very-dark-violet;
+        margin-bottom: 5px;
+    }
+    &__p{
+        color: v.$Dark-grayish-violet;
+        margin-bottom: 35px;
+    }
+    &__button{
+        @include mixins.button;
+        width: 80%;
+    }
+    @media (min-width: 900px){
+        width: 40%;
+        top: 0;
+        bottom: 0;
+        right: 100px;
+    }
+}

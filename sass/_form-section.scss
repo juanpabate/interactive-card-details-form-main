@@ -1,0 +1,66 @@
+@use 'variables' as v;
+@use 'mixins';
+
+.form{
+    display: flex;
+    flex-direction: column;
+    padding: 60px 20px 30px;
+    color: v.$Very-dark-violet;
+    text-transform: uppercase;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    &__datecode{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 0 10px;
+    }
+    &__date__inputs{
+        display: flex;
+        flex-direction: row;
+        gap: 5px;
+    }
+    &-datecode__cvc{
+        display: flex;
+        width: 100%;
+    }
+    &__errors{
+        display: flex;
+        gap: 15px;
+    }
+    &__cardholder{
+        @include mixins.input;
+    }
+    &__cardnumber{
+        @include mixins.input;
+    }
+    &__button{
+        @include mixins.button;
+    }
+    @media (min-width: 900px){
+        padding: 0;
+        font-size: 9px;
+        &-content{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        width: 50%;
+    }
+}
+.error{
+    color: v.$Red;
+    font-size: 10px;
+    text-transform: none;
+    margin: 0 0 15px;
+    width: 50%;
+    letter-spacing: 0;
+    @media (min-width: 900px){
+        font-size: 8px;
+        margin-bottom: 10px;
+    }
+}
+.input{
+    width: 100%;
+    @include mixins.input;
+}

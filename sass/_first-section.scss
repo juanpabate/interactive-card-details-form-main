@@ -1,0 +1,90 @@
+@use 'variables' as v;
+
+.cards-section{
+    background-image: url("images/bg-main-mobile.png");
+    color: v.$White;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    width: 100%;
+    height: 245px;
+    @media (min-width: 900px){
+        // border: 1px solid blue;
+        background-image: url("images/bg-main-desktop.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 100%;
+        height: 100%;
+    }
+}
+.front-card{
+    background-image: url("images/bg-card-front.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+    justify-content: center;
+    position: absolute;
+    top: 130px;
+    left: 20px;
+    letter-spacing: 2px;
+    font-size: 18px;
+    z-index: 1;
+    &__logo{
+        width: 50px;
+        margin-top: 0;
+        margin-bottom: 15px;
+        // padding-top: 15px;
+    }
+    &__namedate{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        font-size: 9px;
+        margin: 0;
+        // margin-bottom: 20px;
+        text-transform: uppercase;
+    }
+    @media (min-width: 900px){
+        top: 95px;
+        width: 200px;
+        left: 55px;
+        &__logo{
+            width: 40px;
+        }
+        &__number{
+            font-size: 13px;
+        }
+        &__namedate{
+            font-size: 8px;
+        }
+    }
+}
+.back-card{
+    background-image: url("images/bg-card-back.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 278px;
+    height: 180px;
+    position: absolute;
+    left: 80px;
+    top: 35px;
+    &__code{
+        margin-left: 218px;
+        margin-top: 67px;
+        font-size: 12px;
+        color: v.$Light-grayish-violet;
+    }
+    @media (min-width: 900px){
+        width: 228.5px;
+        left: 85px;
+        top: 240px;
+        &__code{
+            margin-top: 55px;
+            margin-left: 180px;
+            font-size: 10px;
+        }
+    }
+}
