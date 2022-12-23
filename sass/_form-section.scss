@@ -45,7 +45,17 @@
             align-items: center;
             justify-content: center;
         }
+        font-size: 8px;
         width: 50%;
+    }
+    @media (min-width: 1500px){
+        position: absolute;
+        width: 350px;
+        height: 300px;
+        justify-content: space-between;
+        top: 240px;
+        left: 750px;
+        font-size: 12px;
     }
 }
 .error{

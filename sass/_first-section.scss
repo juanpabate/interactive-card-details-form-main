@@ -30,7 +30,6 @@
     top: 130px;
     left: 20px;
     letter-spacing: 2px;
-    font-size: 18px;
     z-index: 1;
     &__logo{
         width: 50px;
@@ -61,6 +60,24 @@
             font-size: 8px;
         }
     }
+    @media(min-width: 1500px){
+        width: 340px;
+        height: 180px;
+        top: 150px;
+        left: 230px;
+        padding: 20px;
+        justify-content: space-between;
+        &__logo{
+            width: 70px;
+            margin-bottom: 40px;
+        }
+        &__number{
+            font-size: 20px;
+        }
+        &__namedate{
+            font-size: 12px;
+        }
+    }
 }
 .back-card{
     background-image: url("images/bg-card-back.png");
@@ -85,6 +102,17 @@
             margin-top: 55px;
             margin-left: 180px;
             font-size: 10px;
+        }
+    }
+    @media(min-width: 1500px){
+        width: 370px;
+        height: 210px;
+        top: 390px;
+        left: 285px;
+        &__code{
+            font-size: 20px;
+            margin-top: 86px;
+            margin-left: 268px;
         }
     }
 }

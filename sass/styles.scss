@@ -14,7 +14,7 @@ body{
 .main-container{
     width: 375px;
     height: 620px;
-    margin: auto;
+    margin: 50px auto;
     display: flex;
     flex-direction: column;
     position: relative;
@@ -30,6 +30,12 @@ body{
         height: 450px;
         display: grid;
         grid-template-columns: 1fr 2fr;
+    }
+    @media(min-width: 1500px){
+        width: 1200px;
+        height: 750px;
+        grid-template-columns: 2fr 3fr;
+        
     }
 }
 .attribution{
